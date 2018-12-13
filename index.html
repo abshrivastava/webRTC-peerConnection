@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <style>
+    th,
+    td {
+      border: 1px solid black;
+      padding: 5px;
+      width: 250px;
+    }
+
+    .table-tab {
+      margin-top: 20px;
+    }
+
+    .videoTimestamp {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #e6e6e6;
+    }
+
+    #videoFrame {
+      width: 854px;
+      height: 480px;
+      border: 2px solid #000;
+      position: relative;
+    }
+    
+  </style>
+
+<div id="videoFrame"></div>
+  <table>
+    <tr>
+      <th><label>Your ID:</label></th>
+      <th><label>Other ID:</label></th>
+      <th><label>Connection:</label></th>
+    </tr>
+    <tr>
+      <td><textarea id="yourId"></textarea></td>
+      <td><textarea id="otherId"></textarea></td>
+      <td><button id="connect">Connect</button></td>
+    </tr>
+  </table>
+  
+  <table class="table-tab">
+    <tr>
+      <th><label>System Timestamp:</label></th>
+      <td>
+        <h3 id="timeStamp1"></h3>
+      </td>
+    </tr>
+
+    <tr>
+      <th><label>Stream Duration:</label></th>
+      <td>
+        <h3 id="videoStrimTime"></h3>
+      </td>
+    </tr>
+
+    <tr id="frameInfoSender">
+      <th><label>Sender Frame No:</label></th>
+      <td>
+        <h3 id="framesEncoded"></h3>
+      </td>
+    </tr>
+
+    <tr id="frameInfoReceiver">
+      <th><label>Receiver Frame No:</label></th>
+      <td>
+        <h3 id="framesDecodeds"></h3>
+      </td>
+    </tr>
+
+    <tr>
+      <th><label>Encoder Timestamp:</label></th>
+      <td>
+        <h3 id="timingFrameVal"></h3>
+      </td>
+    </tr>
+
+    <tr>
+      <th><label>Network Delay Time:</label></th>
+      <td>
+        <h3 id="NetworkDelayVal"></h3>
+      </td>
+    </tr>
+
+    <tr>
+      <th><label>End To End Delay Time:</label></th>
+      <td>
+        <h3 id="end2endDelay"></h3>
+      </td>
+    </tr>
+
+  </table>
+  <div class="videoTimestamp"><h3 id="videoStrimTime"></h3></div>
+  <script src="bundle.js" charset="utf-8"></script>
+</body>
+
+</html>
